@@ -1,9 +1,9 @@
-package control;
+package comic.Control;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import entity.Conexion;
+import conexion.Conexion;
 import view.InputTypes;
 
 public class Eliminar {

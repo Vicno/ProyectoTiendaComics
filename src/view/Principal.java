@@ -3,7 +3,7 @@ package view;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import entity.Conexion;
+import conexion.Conexion;
 
 public class Principal {
 	private static Scanner scanner = new Scanner(System.in);
@@ -11,8 +11,8 @@ public class Principal {
 	public static void main(String[] args) {
 		Conexion conexion;
 		try {
-			conexion = new Conexion("root","","basededatoscomics");
-			view.Menu.menu(scanner,conexion);
+			conexion = new Conexion("root","","tiendacomics");
+			MenuGeneral.menu(scanner,conexion);
 			scanner.close();
 			conexion.close();
 		} catch (ClassNotFoundException e) {

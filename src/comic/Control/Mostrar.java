@@ -1,8 +1,9 @@
-package control;
+package comic.Control;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import entity.Conexion;
+
+import conexion.Conexion;
 
 public class Mostrar {
 	private static ResultSet resultSet;
