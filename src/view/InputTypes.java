@@ -1,5 +1,6 @@
 package view;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class InputTypes {
@@ -44,4 +45,22 @@ public class InputTypes {
 		return numero;
 	}
 
+	public static BigDecimal readBig(String sampleText, Scanner scanner) { // Leer solo numeros del teclado
+		BigDecimal numero;
+		while (true) {
+			System.out.print(sampleText);
+			try {
+				numero = scanner.nextBigDecimal();
+				break;
+			} catch (java.util.InputMismatchException e) {
+				System.out.println(">>Por favor, ingrese solamente valores enteros.");
+
+			} finally {
+				scanner.nextLine();
+			}
+		}
+		return numero;
+	}
+	
+	
 }

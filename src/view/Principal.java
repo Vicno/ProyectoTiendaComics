@@ -11,7 +11,7 @@ public class Principal {
 	public static void main(String[] args) {
 		Conexion conexion;
 		try {
-			conexion = new Conexion("root","","basededatoscomics");
+			conexion = new Conexion("root","","tiendacomics");
 			view.Menu.menu(scanner,conexion);
 			scanner.close();
 			conexion.close();

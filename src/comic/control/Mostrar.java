@@ -1,4 +1,4 @@
-package control;
+package comic.control;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

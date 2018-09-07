@@ -32,9 +32,6 @@ public class Conexion {
 		if (sentencia != null) {
 			sentencia.close();
 		}
-		if(connection!= null) {
-			connection.close();
-		}
 	}
 	public PreparedStatement getSentencia() {
 		return sentencia;
