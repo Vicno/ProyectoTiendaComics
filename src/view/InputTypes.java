@@ -21,12 +21,13 @@ public class InputTypes {
 		return numero;
 	}
 
-	public static String readString(String sampleText, Scanner scanner) { // Leer solo numeros del teclado
+	public static String readString(String sampleText, Scanner scanner) { // Leer solo letras del teclado
 		String cadena;
 		System.out.print(sampleText);
 		cadena = scanner.nextLine();
 		return cadena;
 	}
+	
 
 	public static double readDouble(String sampleText, Scanner scanner) { // Leer solo numeros del teclado
 		double numero;

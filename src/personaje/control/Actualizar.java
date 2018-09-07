@@ -1,4 +1,4 @@
-package guionista.control;
+package personaje.control;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -10,10 +10,10 @@ public class Actualizar {
 	
 	public static void actualizar(Scanner scanner, Conexion conexion) {
 		try {
-			conexion.consulta("UPDATE GUIONISTA "
-					+ "SET NOMBREGUIONISTA = ? "
-					+ "WHERE CODIGOGUIONISTA = ? ");
-			int codigo = InputTypes.readInt("Ingrese el código de guionista a modificar: ", scanner);
+			conexion.consulta("UPDATE PERSONAJES "
+					+ "SET NOMBREPERSONAJE = ? "
+					+ "WHERE CODIGOPERSONAJE = ? ");
+			int codigo = InputTypes.readInt("Ingrese el código de personaje a modificar: ", scanner);
 			String nombre = InputTypes.readString("Ingrese el nuevo nombre: ", scanner);
 			
 			conexion.getSentencia().setString(1, nombre);
