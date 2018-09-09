@@ -9,11 +9,12 @@ public class Mostrar {
 
 	public static void mostrar(Conexion conexion) {
 		try {
-			conexion.consulta("SELECT c.codigoComic, c.Titulo, c.numeroComic,c.añoPublicacion,c.editorial,c.descripcion,g1.nombreGuionista,d1.nombredibujante,c.precio\r\n" + 
-					"FROM comic c INNER JOIN guionistacomic g ON c.codigoComic = g.codigoComic\r\n" + 
-					"  INNER JOIN guionista g1 ON g.codigoGuionista = g1.codigoGuionista \r\n" + 
-					"  INNER JOIN dibujantecomic d ON c.codigoComic = d.codigoComic\r\n" + 
-					"  INNER JOIN dibujante d1 ON d.codigoDibujante = d1.codigodibujante");
+			conexion.consulta(" SELECT c.codigoComic, c.Titulo, c.numeroComic,c.añoPublicacion,c.editorial,c.descripcion,g1.nombreGuionista,d1.nombredibujante,c.precio, p.nombrePersonaje " +
+					" FROM comic c INNER JOIN guionistacomic g ON c.codigoComic = g.codigoComic "+ 
+					 " INNER JOIN guionista g1 ON g.codigoGuionista = g1.codigoGuionista  "+
+					  " INNER JOIN dibujantecomic d ON c.codigoComic = d.codigoComic "+
+					  " INNER JOIN dibujante d1 ON d.codigoDibujante = d1.codigodibujante "+
+ " INNER JOIN comicpersonajes c1 ON c.codigoComic = c1.códigoComic INNER JOIN personajes p ON c1.códigoPersonaje = p.codigoPersonaje");
 			resultSet = conexion.resultado();
 
 			while (resultSet.next()) {

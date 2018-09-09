@@ -59,8 +59,11 @@ public class Añadir {
 				}
 
 			}
-			String opt = InputTypes.readString("Hay más Guionistas?: (Y/N) ", scanner);
-			if ( opt == "N" || opt == "n") {
+			
+			int opt = InputTypes.readInt("Hay más Guionistas?: (Yes: 1/No: 2) ", scanner);
+			
+			//System.out.println("tdo bien");
+			if (opt == 2) {
 				break;
 			}
 		}
@@ -81,8 +84,9 @@ public class Añadir {
 					System.out.println("Error, dibujante no se encuentra en la base de datos! ");
 				}
 			}
-			String opt = InputTypes.readString("Hay más Dibujantes?: (Y/N) ", scanner);
-			if ( opt == "N"|| opt == "n") {
+			
+			int opt = InputTypes.readInt("Hay más Dibujantes?: (Yes: 1/No: 2) ", scanner);
+			if (opt == 2) {
 				break;
 			}
 		}
@@ -95,7 +99,7 @@ public class Añadir {
 
 					conexion.consulta(
 							"INSERT INTO" + " comicpersonajes (códigoComic, códigoPersonaje)" + "  VALUES (?,?)");
-					int codigoPersonaje = InputTypes.readInt("Ingrese el código del dibujante: ", scanner);
+					int codigoPersonaje = InputTypes.readInt("Ingrese el código del personaje: ", scanner);
 					conexion.getSentencia().setBigDecimal(1, comicCodigo);
 					conexion.getSentencia().setInt(2, codigoPersonaje);
 					conexion.modificacion();
@@ -105,8 +109,39 @@ public class Añadir {
 				}
 
 			}
-			String opt = InputTypes.readString("Hay más Personajes?: (Y/N) ", scanner);
-			if ( opt == "N" || opt == "n") {
+			
+			int opt = InputTypes.readInt("Hay más Personajes?: (Yes: 1/No: 2) ", scanner);
+			if (opt == 2) {
+				break;
+			}
+		}
+		
+		// Relacion con especial
+		while (true) {
+			
+			int respuesta = InputTypes.readInt("El codigo tiene algun detalle especial? Yes: 1/ No: 2", scanner);
+			if (respuesta == 1) {
+			while (true) {
+				try {
+					int codigoEspecial = InputTypes.readInt("Ingrese el código de la condicion especial: ", scanner);
+					conexion.getSentencia().setInt(8, codigoEspecial);
+					conexion.modificacion();
+					break;
+				} catch (SQLException e) {
+					System.out.println("Error, Personaje no se encuentra en la base de datos! ");
+				}
+
+			}
+			
+			int opt = InputTypes.readInt("Hay más Personajes?: (Yes: 1/No: 2) ", scanner);
+			if (opt == 2) {
+				break;
+			}
+		}
+			else if(respuesta > 2 || respuesta < 1) {
+				System.out.println("Ingrese una respuesta valida");
+			}
+			else {
 				break;
 			}
 		}

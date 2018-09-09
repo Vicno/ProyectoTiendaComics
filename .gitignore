@@ -1,0 +1,11 @@
+# Compiled source #
+###################
+/bin/*
+bin/
+bin
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so

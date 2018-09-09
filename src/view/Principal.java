@@ -18,8 +18,8 @@ public class Principal {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			System.out.println("El valor de codigo principal ingresado ya existe");
+		} 
 		
 		
 

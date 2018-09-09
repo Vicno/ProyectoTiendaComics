@@ -1,16 +1,16 @@
-package view;
+package tipoEspecial.view;
 
 import java.util.Scanner;
 
 import entity.Conexion;
+import view.InputTypes;
 
 public class Menu {
 	public static int getOpcion(Scanner scanner) {
 		while (true) {
-			System.out.println("\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n	    MENU  \n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+			System.out.println("\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n	    TipoEspecial \n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
 			System.out.println(
-					"\n 1. Comic \n 2. Dibujante  \n 3. Guionista \n 4. Personaje \n 5. Venta \n 6. Factura Venta"
-					+ " \n 7. Tipo Especial \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
+					"\n 1. Actualizar \n 2. Añadir  \n 3. Mostrar \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
 			int opcion = InputTypes.readInt("Que desea hacer?: ", scanner);
 			System.out.println("\n --------------------------");
 			return opcion;
@@ -23,23 +23,14 @@ public class Menu {
 
 			switch (getOpcion(scanner)) {
 			case 1:
-				comic.view.Menu.menu(scanner, conexion);
+				tipoEspecial.control.Actualizar.actualizar(scanner, conexion);
 				break;
 			case 2:
-				dibujante.view.Menu.menu(scanner, conexion);
+				tipoEspecial.control.Añadir.anadir(scanner, conexion);
 				break;
 			case 3:
-				guionista.view.Menu.menu(scanner, conexion);
+				tipoEspecial.control.Mostrar.mostrar(conexion);
 				break;
-			case 4:
-				personaje.view.Menu.menu(scanner, conexion);
-				break;
-			case 5:
-				venta.view.Menu.menu(scanner, conexion);
-			case 6:
-				factura.view.Menu.menu(scanner, conexion);
-			case 7:
-				tipoEspecial.view.Menu.menu(scanner, conexion);
 			case 0:
 				System.out.println("Cerrando Sistema ...    ");
 				salir = false;

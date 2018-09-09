@@ -25,7 +25,7 @@ public class Conexion {
 	public ResultSet resultado() throws SQLException {
 		return sentencia.executeQuery();
 	}
-	public int modificacion () throws SQLException {
+	public int modificacion () throws SQLException, java.sql.SQLIntegrityConstraintViolationException {
 		return sentencia.executeUpdate();
 	}
 	public void close() throws SQLException {
