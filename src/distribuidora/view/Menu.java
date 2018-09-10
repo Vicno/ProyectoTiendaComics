@@ -10,7 +10,7 @@ public class Menu {
 		while (true) {
 			System.out.println("\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n	    DISTRIBUIDORA  \n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
 			System.out.println(
-					"\n 1. Actualizar \n 2. Añadir  \n 3. Mostrar \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
+					"\n 1. Actualizar \n 2. Añadir  \n 3. Mostrar \n 4. Eliminar \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
 			int opcion = InputTypes.readInt("Que desea hacer?: ", scanner);
 			System.out.println("\n --------------------------");
 			return opcion;
@@ -30,6 +30,9 @@ public class Menu {
 				break;
 			case 3:
 				distribuidora.control.Mostrar.mostrar(conexion);
+				break;
+			case 4:
+				distribuidora.control.Eliminar.eliminar(scanner, conexion);
 				break;
 			case 0:
 				System.out.println("Cerrando Sistema ...    ");
