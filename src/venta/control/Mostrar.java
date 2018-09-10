@@ -21,7 +21,7 @@ public class Mostrar {
 				
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println("n");;
 		}
 	}
 }

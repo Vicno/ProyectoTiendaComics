@@ -14,6 +14,7 @@ public class Añadir {
 		while (true) {
 			try {
 
+				/*****autogenerar base de datos**/
 				conexion.consulta("INSERT INTO"
 						+ " comic (codigoComic, Titulo, numeroComic, añoPublicacion, editorial, descripcion, precio)"
 						+ "  VALUES (?,?, ?,?, ? , ?, ?)" + "");
@@ -24,6 +25,13 @@ public class Añadir {
 				String descripcion = InputTypes.readString("Ingrese la descripcion: ", scanner);
 				String comicEditorial = InputTypes.readString("Ingrese el nombre de editorial: ", scanner);
 				Double precio = InputTypes.readDouble("Ingrese el precio: ", scanner);
+				
+				int respuesta = InputTypes.readInt("El comic tiene alguna condicion especial? YES: 1/ No: 2", scanner);
+				int codigoEspecial = 0;
+				if (respuesta == 1) {
+					codigoEspecial = InputTypes.readInt("Ingrese el codigo de la condicion especial", scanner);
+				}
+					
 
 				conexion.getSentencia().setBigDecimal(1, comicCodigo);
 				conexion.getSentencia().setString(2, comicTitulo);
@@ -32,6 +40,7 @@ public class Añadir {
 				conexion.getSentencia().setString(5, comicEditorial);
 				conexion.getSentencia().setString(6, descripcion);
 				conexion.getSentencia().setDouble(7, precio);
+				conexion.getSentencia().setDouble(8, codigoEspecial);
 				conexion.modificacion();
 				break;
 
@@ -116,35 +125,8 @@ public class Añadir {
 			}
 		}
 		
-		// Relacion con especial
-		while (true) {
-			
-			int respuesta = InputTypes.readInt("El codigo tiene algun detalle especial? Yes: 1/ No: 2", scanner);
-			if (respuesta == 1) {
-			while (true) {
-				try {
-					int codigoEspecial = InputTypes.readInt("Ingrese el código de la condicion especial: ", scanner);
-					conexion.getSentencia().setInt(8, codigoEspecial);
-					conexion.modificacion();
-					break;
-				} catch (SQLException e) {
-					System.out.println("Error, Personaje no se encuentra en la base de datos! ");
-				}
-
-			}
-			
-			int opt = InputTypes.readInt("Hay más Personajes?: (Yes: 1/No: 2) ", scanner);
-			if (opt == 2) {
-				break;
-			}
-		}
-			else if(respuesta > 2 || respuesta < 1) {
-				System.out.println("Ingrese una respuesta valida");
-			}
-			else {
-				break;
-			}
-		}
+		
+		
 
 	}
 }
