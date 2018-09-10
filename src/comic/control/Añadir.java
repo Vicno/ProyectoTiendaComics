@@ -16,8 +16,8 @@ public class Añadir {
 
 				/*****autogenerar base de datos**/
 				conexion.consulta("INSERT INTO"
-						+ " comic (codigoComic, Titulo, numeroComic, añoPublicacion, editorial, descripcion, precio)"
-						+ "  VALUES (?,?, ?,?, ? , ?, ?)" + "");
+						+ " comic (codigoComic, Titulo, numeroComic, añoPublicacion, editorial, descripcion, precio, codigoespecial)"
+						+ "  VALUES (?,?, ?,?, ? , ?, ?, ?)" + "");
 				comicCodigo = InputTypes.readBig("Ingrese el código: ", scanner);
 				String comicTitulo = InputTypes.readString("Ingrese el titulo: ", scanner);
 				int comicNumero = InputTypes.readInt("Ingrese el número de comic: ", scanner);

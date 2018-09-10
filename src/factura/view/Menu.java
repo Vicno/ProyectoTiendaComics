@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Scanner;
 
+import Excepciones.FacturaRepetida;
 import entity.Conexion;
 import view.InputTypes;
 
@@ -26,7 +27,11 @@ public class Menu {
 			switch (getOpcion(scanner)) {
 			case 1:
 				
-				factura.control.Añadir.anadir(scanner, conexion);
+				try {
+					factura.control.Añadir.anadir(scanner, conexion);
+				} catch (FacturaRepetida e) {
+					System.out.println("EL codigo de venta ingresado ya tiene una factura a su nombre");
+				}
 				
 				break;
 			case 2:

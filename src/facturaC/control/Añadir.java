@@ -3,6 +3,7 @@ package facturaC.control;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import Excepciones.FacturaRepetida;
 import entity.Conexion;
 import view.InputTypes;
 
@@ -13,9 +14,10 @@ public class Añadir {
 	 *                          el cual en teoria, ya esta tratado, pero aun asi da error
 	 * @param scanner
 	 * @param conexion
+	 * @throws FacturaRepetida 
 	 * @throws java.sql.SQLIntegrityConstraintViolationException
 	 */
-	public static void anadir(Scanner scanner, Conexion conexion) {
+	public static void anadir(Scanner scanner, Conexion conexion) throws FacturaRepetida {
 		try {
 			conexion.consulta(
 					"INSERT INTO" + " FACTURAC (numerocompra, NIT, nombre)"
@@ -39,9 +41,8 @@ public class Añadir {
 			conexion.getSentencia().setInt(2, ID);
 			conexion.getSentencia().setString(3, nombre);
 			conexion.modificacion();
-		} catch (Throwable e) {
-			System.out.println("agarro xdxd;lol6");
-			e.printStackTrace();
+		} catch (SQLException e) {
+			throw new FacturaRepetida();
 		}
 
 	}
