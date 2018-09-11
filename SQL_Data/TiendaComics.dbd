@@ -57,7 +57,7 @@
             </Location>
             <Size>
               <Width>200 px</Width>
-              <Height>212 px</Height>
+              <Height>178 px</Height>
             </Size>
             <DbOid>
               <Path>tiendacomics.comic</Path>
@@ -105,20 +105,20 @@
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>194.454545454546 px</X>
-                  <Y>12.6363636363637 px</Y>
+                  <X>205.811586783429 px</X>
+                  <Y>69.2608612964345 px</Y>
                 </Location>
-                <Anchors>Top Bottom</Anchors>
+                <Anchors>None</Anchors>
                 <Align>Right</Align>
                 <CustomProperties>
                   <OID>5</OID>
-                  <PortType>FloatAnchor</PortType>
+                  <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
                   <X>0.295454545454618 px</X>
-                  <Y>106.757916241062 px</Y>
+                  <Y>89.6363636363634 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
                 <Align>Left</Align>
@@ -131,11 +131,11 @@
             <BendPoints>
               <PointD>
                 <X>546 px</X>
-                <Y>541.636363636364 px</Y>
+                <Y>598.260864257813 px</Y>
               </PointD>
               <PointD>
                 <X>546 px</X>
-                <Y>558.757916241062 px</Y>
+                <Y>541.636352539063 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -155,7 +155,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-180.5 px</X>
-                  <Y>-17.1215709339488 px</Y>
+                  <Y>56.624508757372 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -266,7 +266,7 @@
               <Port>
                 <Location>
                   <X>0 px</X>
-                  <Y>0.595505617977528 px</Y>
+                  <Y>0.5 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
                 <Align>Right</Align>
@@ -276,16 +276,6 @@
                 </CustomProperties>
               </Port>
             </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>1123 px</X>
-                <Y>452.5 px</Y>
-              </PointD>
-              <PointD>
-                <X>1123 px</X>
-                <Y>452.595505617978 px</Y>
-              </PointD>
-            </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
               <Path>tiendacomics.dibujantecomic.FK_digujantecomic_comic_codigoComic</Path>
@@ -302,8 +292,8 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>33 px</X>
-                  <Y>-0.09552001953125 px</Y>
+                  <X>30.5 px</X>
+                  <Y>0 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -315,8 +305,8 @@
               </Port>
             </PortAnchors>
             <CommentOffset>
-              <X>703.418884277344 px</X>
-              <Y>-12.5 px</Y>
+              <X>863.418884277344 px</X>
+              <Y>-132.5 px</Y>
             </CommentOffset>
           </Model>
           <Model xsi:type="RelationLinkModel">
@@ -969,8 +959,8 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>530 px</X>
-              <Y>320 px</Y>
+              <X>370 px</X>
+              <Y>310 px</Y>
             </Location>
             <Size>
               <Width>199 px</Width>
@@ -986,84 +976,9 @@
               <TriggersCollapsed>True</TriggersCollapsed>
             </Compartments>
           </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>59</OID>
-              <Comment>60</Comment>
-              <OutModel>1</OutModel>
-              <InModel>58</InModel>
-              <OutPort>61</OutPort>
-              <InPort>62</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>0 px</X>
-                  <Y>53 px</Y>
-                </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>61</OID>
-                  <PortType>FloatAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>99.5 px</X>
-                  <Y>0 px</Y>
-                </Location>
-                <Anchors>Left Right</Anchors>
-                <Align>Bottom</Align>
-                <CustomProperties>
-                  <OID>62</OID>
-                  <PortType>FloatAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>629.5 px</X>
-                <Y>505 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>tiendacomics.comic.FK_comic_tipoespecial_codigoEspecial</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>60</OID>
-              <HolderModel>59</HolderModel>
-              <Port>63</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>118.75 px</X>
-                  <Y>0 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>63</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
           <Model xsi:type="TableModel">
             <CustomProperties>
-              <OID>64</OID>
+              <OID>59</OID>
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
@@ -1086,7 +1001,7 @@
           </Model>
           <Model xsi:type="TableModel">
             <CustomProperties>
-              <OID>65</OID>
+              <OID>60</OID>
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
@@ -1095,7 +1010,7 @@
             </Location>
             <Size>
               <Width>235 px</Width>
-              <Height>144 px</Height>
+              <Height>161 px</Height>
             </Size>
             <DbOid>
               <Path>tiendacomics.detallecompra</Path>
@@ -1109,12 +1024,12 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
-              <OID>66</OID>
-              <Comment>67</Comment>
-              <OutModel>64</OutModel>
+              <OID>61</OID>
+              <Comment>62</Comment>
+              <OutModel>59</OutModel>
               <InModel>1</InModel>
-              <OutPort>68</OutPort>
-              <InPort>69</InPort>
+              <OutPort>63</OutPort>
+              <InPort>64</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
@@ -1126,7 +1041,7 @@
                 <Anchors>Left Right</Anchors>
                 <Align>Top</Align>
                 <CustomProperties>
-                  <OID>68</OID>
+                  <OID>63</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -1138,7 +1053,7 @@
                 <Anchors>Left Right</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>69</OID>
+                  <OID>64</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -1146,6 +1061,75 @@
             <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
               <Path>tiendacomics.detalleventa.FK_detalleventa_comic_codigoComic</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>62</OID>
+              <HolderModel>61</HolderModel>
+              <Port>65</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>0 px</X>
+                  <Y>95 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>65</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>66</OID>
+              <Comment>67</Comment>
+              <OutModel>59</OutModel>
+              <InModel>52</InModel>
+              <OutPort>68</OutPort>
+              <InPort>69</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>74.5 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>68</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>91.5 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>69</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>tiendacomics.detalleventa.FK_detalleventa_venta_numeroVenta</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -1160,10 +1144,10 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>0 px</X>
-                  <Y>78 px</Y>
+                  <Y>-23.5 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Top</Align>
+                <Align>Bottom</Align>
                 <CustomProperties>
                   <OID>70</OID>
                   <PortType>FixedAnchor</PortType>
@@ -1180,8 +1164,8 @@
             <CustomProperties>
               <OID>71</OID>
               <Comment>72</Comment>
-              <OutModel>64</OutModel>
-              <InModel>52</InModel>
+              <OutModel>60</OutModel>
+              <InModel>1</InModel>
               <OutPort>73</OutPort>
               <InPort>74</InPort>
               <Parent>0</Parent>
@@ -1189,11 +1173,11 @@
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>74.5 px</X>
-                  <Y>0 px</Y>
+                  <X>0 px</X>
+                  <Y>80.5 px</Y>
                 </Location>
-                <Anchors>Left Right</Anchors>
-                <Align>Bottom</Align>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
                 <CustomProperties>
                   <OID>73</OID>
                   <PortType>FloatAnchor</PortType>
@@ -1201,20 +1185,26 @@
               </Port>
               <Port>
                 <Location>
-                  <X>91.5 px</X>
+                  <X>50 px</X>
                   <Y>0 px</Y>
                 </Location>
                 <Anchors>Left Right</Anchors>
-                <Align>Top</Align>
+                <Align>Bottom</Align>
                 <CustomProperties>
                   <OID>74</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
             </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>917 px</X>
+                <Y>770.5 px</Y>
+              </PointD>
+            </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
-              <Path>tiendacomics.detalleventa.FK_detalleventa_venta_numeroVenta</Path>
+              <Path>tiendacomics.detallecompra.FK_detallecompra_comic_codigoComic</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -1228,11 +1218,11 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>0 px</X>
-                  <Y>-23.5 px</Y>
+                  <X>-82 px</X>
+                  <Y>70.25 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Bottom</Align>
+                <Align>Right</Align>
                 <CustomProperties>
                   <OID>75</OID>
                   <PortType>FixedAnchor</PortType>
@@ -1249,8 +1239,8 @@
             <CustomProperties>
               <OID>76</OID>
               <Comment>77</Comment>
-              <OutModel>65</OutModel>
-              <InModel>1</InModel>
+              <OutModel>60</OutModel>
+              <InModel>8</InModel>
               <OutPort>78</OutPort>
               <InPort>79</InPort>
               <Parent>0</Parent>
@@ -1259,10 +1249,10 @@
               <Port>
                 <Location>
                   <X>0 px</X>
-                  <Y>72 px</Y>
+                  <Y>93.9166666666667 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
-                <Align>Right</Align>
+                <Align>Left</Align>
                 <CustomProperties>
                   <OID>78</OID>
                   <PortType>FloatAnchor</PortType>
@@ -1270,11 +1260,11 @@
               </Port>
               <Port>
                 <Location>
-                  <X>50 px</X>
-                  <Y>0 px</Y>
+                  <X>0 px</X>
+                  <Y>52.9166666666667 px</Y>
                 </Location>
-                <Anchors>Left Right</Anchors>
-                <Align>Bottom</Align>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
                 <CustomProperties>
                   <OID>79</OID>
                   <PortType>FloatAnchor</PortType>
@@ -1283,13 +1273,17 @@
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>917 px</X>
-                <Y>762 px</Y>
+                <X>580 px</X>
+                <Y>783.916666666667 px</Y>
+              </PointD>
+              <PointD>
+                <X>580 px</X>
+                <Y>766.916666666667 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
-              <Path>tiendacomics.detallecompra.FK_detallecompra_comic_codigoComic</Path>
+              <Path>tiendacomics.detallecompra.FK_detallecompra_compra_numerocompra</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -1303,92 +1297,13 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-82 px</X>
-                  <Y>49 px</Y>
+                  <X>47.5 px</X>
+                  <Y>16.9999796549479 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Right</Align>
+                <Align>Left</Align>
                 <CustomProperties>
                   <OID>80</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>81</OID>
-              <Comment>82</Comment>
-              <OutModel>65</OutModel>
-              <InModel>8</InModel>
-              <OutPort>83</OutPort>
-              <InPort>84</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>0 px</X>
-                  <Y>84 px</Y>
-                </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>83</OID>
-                  <PortType>FloatAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>0 px</X>
-                  <Y>52.9166666666667 px</Y>
-                </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>84</OID>
-                  <PortType>FloatAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>580 px</X>
-                <Y>774 px</Y>
-              </PointD>
-              <PointD>
-                <X>580 px</X>
-                <Y>766.916687011719 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>tiendacomics.detallecompra.FK_detallecompra_compra_numerocompra</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>82</OID>
-              <HolderModel>81</HolderModel>
-              <Port>85</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>47.5 px</X>
-                  <Y>7.08331298828125 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>85</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
                 <LinkPortAnchor>OutPoint</LinkPortAnchor>
@@ -1399,13 +1314,190 @@
               <Y>206 px</Y>
             </CommentOffset>
           </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>81</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>610 px</X>
+              <Y>390 px</Y>
+            </Location>
+            <Size>
+              <Width>184 px</Width>
+              <Height>124 px</Height>
+            </Size>
+            <DbOid>
+              <Path>tiendacomics.comicespecial</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>82</OID>
+              <Comment>83</Comment>
+              <OutModel>81</OutModel>
+              <InModel>1</InModel>
+              <OutPort>84</OutPort>
+              <InPort>85</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>166.811583466301 px</X>
+                  <Y>87.6811528180834 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>84</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>8.42857142857144 px</X>
+                  <Y>25.7142857142857 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>85</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>814 px</X>
+                <Y>477.681152818083 px</Y>
+              </PointD>
+              <PointD>
+                <X>814 px</X>
+                <Y>477.714285714286 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>tiendacomics.comicespecial.FK_comicespecial_comic_codigoComic</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>83</OID>
+              <HolderModel>82</HolderModel>
+              <Port>86</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-46.5 px</X>
+                  <Y>-0.0331416155103739 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>86</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>-174 px</X>
+              <Y>-182 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>87</OID>
+              <Comment>88</Comment>
+              <OutModel>81</OutModel>
+              <InModel>58</InModel>
+              <OutPort>89</OutPort>
+              <InPort>90</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>62 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>89</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>99.5 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>90</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>469.5 px</X>
+                <Y>452 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>tiendacomics.comicespecial.FK_comicespecial_tipoespecial_codigoEspecial</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>88</OID>
+              <HolderModel>87</HolderModel>
+              <Port>91</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>70.25 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>91</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>306.239227294922 px</X>
+              <Y>-52 px</Y>
+            </CommentOffset>
+          </Model>
         </Children>
         <ViewPort>
           <ScaleMode>Free</ScaleMode>
-          <Scale>1.05</Scale>
+          <Scale>0.69</Scale>
           <Location>
-            <X>226.285714285714 px</X>
-            <Y>29.7142852601551 px</Y>
+            <X>-83.4782597157816 px</X>
+            <Y>242.318836527045 px</Y>
           </Location>
         </ViewPort>
       </Model>
