@@ -12,6 +12,9 @@ public class Añadir {
 	
 	public static void anadir(Scanner scanner, Conexion conexion) {
 		try {
+			
+			comic.control.Mostrar.mostrar(conexion);
+			
 			conexion.consulta(
 					"INSERT INTO" + " DETALLEVENTA (codigodetalleventa, codigocomic, numeroventa, cantidad)"
 							+ "  VALUES (?,?,?, ?)" + "");
