@@ -481,7 +481,7 @@
             </Location>
             <Size>
               <Width>192 px</Width>
-              <Height>110 px</Height>
+              <Height>127 px</Height>
             </Size>
             <DbOid>
               <Path>tiendacomics.factura</Path>
@@ -504,7 +504,7 @@
             </Location>
             <Size>
               <Width>202 px</Width>
-              <Height>110 px</Height>
+              <Height>127 px</Height>
             </Size>
             <DbOid>
               <Path>tiendacomics.facturac</Path>
@@ -1494,10 +1494,10 @@
         </Children>
         <ViewPort>
           <ScaleMode>Free</ScaleMode>
-          <Scale>0.69</Scale>
+          <Scale>1.38</Scale>
           <Location>
-            <X>-83.4782597157816 px</X>
-            <Y>242.318836527045 px</Y>
+            <X>423.188399948059 px</X>
+            <Y>561.739123022524 px</Y>
           </Location>
         </ViewPort>
       </Model>
