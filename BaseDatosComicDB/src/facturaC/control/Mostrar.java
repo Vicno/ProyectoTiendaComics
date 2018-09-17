@@ -21,7 +21,8 @@ public class Mostrar {
 				(resultSet.getString("NIT"));
 				System.out.print("\t");
 				System.out.println(resultSet.getString("NOMBRE"));
-				
+				System.out.print("\t");
+				System.out.println(resultSet.getString("estadoValido"));
 				
 				
 			}

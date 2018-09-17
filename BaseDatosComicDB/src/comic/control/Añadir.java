@@ -42,12 +42,12 @@ public class Añadir {
 		}
 
 		// Iniciar Relacion con Especial
-		while (true) {
+		
 			while (true) {
 				try {
 					tipoEspecial.control.Mostrar.mostrar(conexion);
 					conexion.consulta(
-							"INSERT INTO comicespecial (\ncodigocomic, codigoEspecial) VALUES (?,?) ");
+							"INSERT INTO comicespecial (codigocomic, codigoEspecial) VALUES (?,?) ");
 					int especial = InputTypes.readInt("Ingrese el código de atributo especial: ", scanner);
 					conexion.getSentencia().setBigDecimal(1, comicCodigo);
 					conexion.getSentencia().setInt(2, especial);
@@ -58,7 +58,7 @@ public class Añadir {
 					e.printStackTrace();
 				}
 
-			}
+			
 
 			int opt = InputTypes.readInt("Hay más Atributos Especiales?: (Yes: 1/No: 2) ", scanner);
 			if (opt == 2) {

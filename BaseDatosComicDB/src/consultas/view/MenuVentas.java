@@ -1,7 +1,6 @@
 package consultas.view;
 
 import java.util.Scanner;
-
 import entity.Conexion;
 import view.InputTypes;
 
@@ -10,7 +9,7 @@ public class MenuVentas {
 		while (true) {
 			System.out.println("\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n	    CONSULTAS - VENTAS  \n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
 			System.out.println(
-					" \n 1. Por Comic  \n 2. Por Dibujante \n 3. Por Guionista \n 4. Por Personaje  \n 5. Por Tipo Especial  \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
+					" \n 1. Por Comic  \n 2. Por Dibujante \n 3. Por Guionista \n 4. Por Personaje  \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
 			int opcion = InputTypes.readInt("Que desea hacer?: ", scanner);
 			System.out.println("\n --------------------------");
 			return opcion;
@@ -23,16 +22,16 @@ public class MenuVentas {
 
 			switch (getOpcion(scanner)) {
 			case 1:
-
-
+				consultas.control.MostrarVentas.ventasComic(conexion, scanner);
 				break;
 			case 2:
-				
-				
+				consultas.control.MostrarVentas.ventasDibujante(conexion, scanner);;				
 				break;
 			case 3:
-
-				
+				consultas.control.MostrarVentas.ventasEscritor(conexion, scanner);			
+				break;
+			case 4:
+				consultas.control.MostrarVentas.ventasPersonaje(conexion, scanner);				
 				break;
 			case 0:
 				System.out.println("Cerrando Sistema ...    ");

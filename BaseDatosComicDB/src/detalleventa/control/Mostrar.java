@@ -10,15 +10,16 @@ public class Mostrar {
 	public static void mostrar(Conexion conexion) {
 		try {
 			System.out.println("Detalles de venta: ");
-			conexion.consulta("SELECT * FROM DetalleVenta");
+			conexion.consulta("SELECT d.codigodetallecompra, d.codigoComic, c.Titulo, d.cantidad, d.numerocompra"
+					+ "  FROM detallecompra d INNER JOIN comic c ON d.codigoComic = c.codigoComic");
 			resultSet = conexion.resultado();
 
 			while (resultSet.next()) {
-				System.out.print(resultSet.getString("codigoDETALLEVENTA"));
+				System.out.print(resultSet.getString("codigoDETALLECompra"));
 				System.out.print("\t");
 				System.out.print(resultSet.getString("CODIGOCOMIC"));
 				System.out.print("\t");
-				System.out.print(resultSet.getString("NUMEROVENTA"));
+				System.out.print(resultSet.getString("NUMEROcompra"));
 				System.out.print("\t");
 				System.out.println(resultSet.getString("CANTIDAD"));
 				

@@ -18,7 +18,7 @@ public class Principal {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-			System.out.println("El valor de codigo principal ingresado ya existe");
+			System.out.println("No se conectó a la base de datos");
 		} 
 		
 		

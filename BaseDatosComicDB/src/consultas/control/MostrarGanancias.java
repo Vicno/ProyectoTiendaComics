@@ -2,87 +2,84 @@ package consultas.control;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
+
 import entity.Conexion;
 
 public class MostrarGanancias {
 	private static ResultSet resultSet;
 
-	public static void mostrar(Conexion conexion, String consulta, String raiz, String tipoCons) {
+	public static void mostrar(Conexion conexion, String consulta, String c1, String c2, String c3) {
 		try {
 			conexion.consulta(consulta);
 			resultSet = conexion.resultado();
 
 			while (resultSet.next()) {
-				System.out.print(resultSet.getString(raiz));
+				System.out.print(resultSet.getString(c1));
 				System.out.print("\t");
-				System.out.print(resultSet.getString(tipoCons));
+				System.out.print(resultSet.getString(c2));
+				System.out.print("\t");
+				System.out.println(resultSet.getString(c3));
 				
-				
-				
+
 			}
 		} catch (SQLException e) {
-			System.out.println("n");
+			System.out.println("");
 		}
 	}
 
-	public static void gananciasComic(Conexion conexion) {
-		String consulta = "SELECT c.Titulo , SUM(c.precio-d1.precioCompraUnidad) AS Ganancia "+
-		 " FROM comic c "+
-		 " INNER JOIN detalleventa d ON c.codigoComic = d.codigoComic"+
-		 " INNER JOIN detallecompra d1 ON c.codigoComic = d1.codigocomic";
-		  mostrar(conexion, consulta, "titulo", "ganancia");
-	}
-
-
-	public static void gananciasEditorial(Conexion conexion) {
-		String consulta =" SELECT c.editorial, SUM(c.precio-d1.precioCompraUnidad) AS Ganancia" + 
+	public static void gananciaComic(Conexion conexion, Scanner scanner) {
+		String consulta = "SELECT c.codigoComic,c.Titulo, SUM(d1.cantidad*(c.precio-d.precioCompraUnidad))AS Ganancia" + 
 				"  FROM comic c" + 
-				"  INNER JOIN detalleventa d ON c.codigoComic = d.codigoComic" + 
-				"  INNER JOIN detallecompra d1 ON c.codigoComic = d1.codigocomic";
-		mostrar(conexion, consulta, "editorial", "ganancia");
+				"  INNER JOIN detallecompra d ON c.codigoComic = d.codigocomic" + 
+				"  INNER JOIN detalleventa d1 ON c.codigoComic = d1.codigoComic" + 
+				"  GROUP BY c.codigoComic";
+		mostrar(conexion, consulta, "codigocomic" , "titulo" , "ganancia");
 	}
 
-	public static void gananciasEscritor(Conexion conexion) {
-		String consulta = "SELECT g1.nombreGuionista, SUM(c.precio-d1.precioCompraUnidad) AS Ganancia" + 
-				"  FROM comic c " + 
-				"INNER JOIN guionistacomic g ON c.codigoComic = g.codigoComic" + 
-				"  INNER JOIN guionista g1 ON g.codigoGuionista = g1.codigoGuionista" + 
-				"  INNER JOIN detalleventa d ON c.codigoComic = d.codigoComic" + 
-				"  INNER JOIN detallecompra d1 ON c.codigoComic = d1.codigocomic";
-		
-		
-		mostrar(conexion, consulta, "nombreescritor", "ganancia");
+	public static void gananciaPersonaje(Conexion conexion, Scanner scanner) {
+		String consulta = "SELECT p.codigoPersonaje,p.nombrePersonaje, SUM(d1.cantidad*(c1.precio-d.precioCompraUnidad))AS Ganancia" + 
+				"  FROM personajes p" + 
+				"  INNER JOIN comicpersonajes c ON p.codigoPersonaje = c.códigoPersonaje" + 
+				"  INNER JOIN comic c1 ON c.códigoComic = c1.codigoComic" + 
+				"  INNER JOIN detallecompra d ON c1.codigoComic = d.codigocomic" + 
+				"  INNER JOIN detalleventa d1 ON c1.codigoComic = d1.codigoComic" + 
+				"  GROUP BY p.codigoPersonaje";
+		mostrar(conexion, consulta, "codigopersonaje" , "nombrepersonaje" , "Ganancia");
 	}
 
-	public static void gananciasDibujante(Conexion conexion) {
-		String consulta = "SELECT d3.nombredibujante, SUM(c.precio-d1.precioCompraUnidad) AS Ganancia" + 
-				"  FROM comic c " + 
-				" INNER JOIN dibujantecomic d2 ON c.codigoComic = d2.codigoComic" + 
-				"  INNER JOIN dibujante d3 ON d2.codigoDibujante = d3.codigodibujante" + 
+	public static void gananciaEscritor(Conexion conexion, Scanner scanner) {
+		String consulta = "SELECT  g.codigoGuionista,g.nombreGuionista,SUM(d.cantidad*(c.precio-d1.precioCompraUnidad))AS Ganancia" + 
+				"  FROM guionista g" + 
+				"  INNER JOIN guionistacomic g1 ON g.codigoGuionista = g1.codigoGuionista" + 
+				"  INNER JOIN comic c ON g1.codigoComic = c.codigoComic" + 
 				"  INNER JOIN detalleventa d ON c.codigoComic = d.codigoComic" + 
-				"  INNER JOIN detallecompra d1 ON c.codigoComic = d1.codigocomic";
-		mostrar(conexion, consulta, "nombredibujante", "ganancia");
+				"  INNER JOIN detallecompra d1 ON c.codigoComic = d1.codigocomic" + 
+				"  GROUP BY g.codigoGuionista";
+		mostrar(conexion, consulta, "codigoguionista" , "nombreguionista" , "Ganancia");
 	}
-	
-	public static void gananciasTotal (Conexion conexion) {
-		try {
-			conexion.consulta("SELECT SUM(c.precio-d1.precioCompraUnidad) AS Ganancia" + 
-					"  FROM comic c " +  
-					"  INNER JOIN detalleventa d ON c.codigoComic = d.codigoComic" + 
-					"  INNER JOIN detallecompra d1 ON c.codigoComic = d1.codigocomic");
-			resultSet = conexion.resultado();
 
-			while (resultSet.next()) {
-				System.out.print(resultSet.getString("Ganancias"));
-				
-				
-				
-				
-			}
-		} catch (SQLException e) {
-			System.out.println("n");
-		}
-		
+	public static void gananciaDibujante(Conexion conexion, Scanner scanner) {
+		String consulta = "SELECT d.codigodibujante,d.nombredibujante, SUM(d2.cantidad*(c.precio-d3.precioCompraUnidad))AS Ganancia" + 
+				"  FROM dibujante d" + 
+				"  INNER JOIN dibujantecomic d1 ON d.codigodibujante = d1.codigoDibujante" + 
+				"  INNER JOIN comic c ON d1.codigoComic = c.codigoComic" + 
+				"  INNER JOIN detalleventa d2 ON c.codigoComic = d2.codigoComic" + 
+				"  INNER JOIN detallecompra d3 ON c.codigoComic = d3.codigocomic" + 
+				"  GROUP BY d.codigodibujante";
+		mostrar(conexion, consulta, "codigodibujante" , "nombredibujante" , "Ganancia");
 	}
+
+	/*public static void gananciaEspecial(Conexion conexion, Scanner scanner) {
+		String consulta = "SELECT t.codigoEspecial,t.Descripcion, SUM(d1.cantidad*(c1.precio-d.precioCompraUnidad)) AS Ganancia" + 
+				"  FROM tipoespecial t" + 
+				"  INNER JOIN comicespecial c ON t.codigoEspecial = c.codigoEspecial" + 
+				"  INNER JOIN comic c1 ON c.codigocomic = c1.codigoComic" + 
+				"  INNER JOIN detallecompra d ON c1.codigoComic = d.codigocomic" + 
+				"  INNER JOIN detalleventa d1 ON c1.codigoComic = d1.codigoComic" + 
+				"  GROUP BY t.codigoEspecial"
+				;
+		mostrar(conexion, consulta, "codigoespecial", "descripcion", "Ganancia");
+	}*/
 
 }

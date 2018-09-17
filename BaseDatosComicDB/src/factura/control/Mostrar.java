@@ -20,7 +20,9 @@ public class Mostrar {
 				System.out.print
 				(resultSet.getString("ID"));
 				System.out.print("\t");
-				System.out.println(resultSet.getString("NOMBRE"));
+				System.out.print(resultSet.getString("NOMBRE"));
+				System.out.print("\t");
+				System.out.println(resultSet.getString("estadoValido"));
 				
 				
 				

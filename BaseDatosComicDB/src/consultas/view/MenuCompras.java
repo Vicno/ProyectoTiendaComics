@@ -10,7 +10,7 @@ public class MenuCompras {
 		while (true) {
 			System.out.println("\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n	    CONSULTAS - COMPRAS  \n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
 			System.out.println(
-					" \n 1. Ventas Realizadas  \n 2. Compras Realizadas \n 3. Ganancias \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
+					" \n 1. Por Comic  \n 2. Por Dibujante \n 3. Por Guionista \n 4. Por Personaje  \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
 			int opcion = InputTypes.readInt("Que desea hacer?: ", scanner);
 			System.out.println("\n --------------------------");
 			return opcion;
@@ -23,13 +23,16 @@ public class MenuCompras {
 
 			switch (getOpcion(scanner)) {
 			case 1:
-				consultas.view.MenuVentas(scanner, conexion);
+				consultas.control.MostrarCompras.comprasComic(conexion, scanner);
 				break;
 			case 2:
-				consultas.view.MenuCompras(scanner, conexion);
+				consultas.control.MostrarCompras.comprasDibujante(conexion, scanner);
 				break;
 			case 3:
-				consultas.view.MenuGanancias(conexion);
+				consultas.control.MostrarCompras.comprasEscritor(conexion, scanner);
+				break;
+			case 4:
+				consultas.control.MostrarCompras.comprasPersonaje(conexion, scanner);
 				break;
 			case 0:
 				System.out.println("Cerrando Sistema ...    ");
