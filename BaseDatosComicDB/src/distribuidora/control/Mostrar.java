@@ -9,7 +9,8 @@ public class Mostrar {
 
 	public static void mostrar(Conexion conexion) {
 		try {
-			System.out.println("Distribuidoras: ");
+			System.out.println("Distribuidoras: "
+			+ "\n  \tCódigo\t || \tNombre\t || \tTeléfono\t || \tPaís");
 			conexion.consulta("SELECT * FROM DISTRIBUIDORA");
 			resultSet = conexion.resultado();
 

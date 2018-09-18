@@ -9,7 +9,8 @@ public class Mostrar {
 
 	public static void mostrar(Conexion conexion) {
 		try {
-			System.out.println("Compras: ");
+			System.out.println("Compras: "
+					+ "\n  \tNúmero\t || \tFecha\t || \tCódigo Distribuidor\t || \t Nombre Distribuidor");
 			conexion.consulta("SELECT c.numerocompra, c.fecha, c.codigodistribuidor, d.nombredistribuidora" + 
 					"  FROM compra c" + 
 					"  INNER JOIN distribuidora d ON c.codigodistribuidor = d.codigodistribuidora");
@@ -23,12 +24,10 @@ public class Mostrar {
 				System.out.print(resultSet.getString("CODIGODISTRIBUIDOR"));
 				System.out.print("\t");
 				System.out.println(resultSet.getString("nombreDISTRIBUIDORA"));
-				
-				
-				
 			}
 		} catch (SQLException e) {
 			System.out.println("n");
 		}
 	}
+	
 }

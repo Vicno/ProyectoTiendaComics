@@ -10,7 +10,8 @@ public class Mostrar {
 
 	public static void mostrar(Conexion conexion) {
 		try  {
-			System.out.println("Facturas Compras: ");
+			System.out.println("Facturas Compras: "
+			+ "\n  \tNúmero de Compra\t || \tNIT\t || \tNombre\t || \tEstado");
 			conexion.consulta("SELECT * FROM FACTURAC");
 			resultSet = conexion.resultado();
 

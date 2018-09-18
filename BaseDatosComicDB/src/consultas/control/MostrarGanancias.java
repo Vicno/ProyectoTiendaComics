@@ -11,6 +11,7 @@ public class MostrarGanancias {
 
 	public static void mostrar(Conexion conexion, String consulta, String c1, String c2, String c3) {
 		try {
+			System.out.println("  \t"+c1+"\t ||  \t"+c2+"\t || \t"+c3+"\t ||");
 			conexion.consulta(consulta);
 			resultSet = conexion.resultado();
 

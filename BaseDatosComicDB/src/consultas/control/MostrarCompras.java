@@ -11,6 +11,8 @@ public class MostrarCompras {
 
 	public static void mostrar(Conexion conexion, String consulta, String c1, String c2, String c3, String c4, String c5) {
 		try {
+			
+			System.out.println("  \t"+c1+"\t ||  \t"+c2+"\t || \t"+c3+"\t ||  \t"+c4+"\t ||  \t"+c5+"\t ||");
 			conexion.consulta(consulta);
 			resultSet = conexion.resultado();
 

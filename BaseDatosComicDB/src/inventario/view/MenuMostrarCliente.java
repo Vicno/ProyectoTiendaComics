@@ -8,9 +8,9 @@ import view.InputTypes;
 public class MenuMostrarCliente {
 	public static int getOpcion(Scanner scanner) {
 		while (true) {
-			System.out.println("\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n	     MENU - MOSTRAR \n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+			System.out.println("\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n	     CLIENTE - MOSTRAR \n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
 			System.out.println(
-					"\n 1. Comic \n 2. Variaciones Comic \n 3. Tipos Variaciones \n 4. Dibujante  \n 5. Guionista \n 6. Personaje \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
+					"\n 1. Comic \n 2. Variaciones Comic \n 3. Dibujante  \n 4. Guionista \n 5. Personaje \n 0. Salir\n\n ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\n");
 			int opcion = InputTypes.readInt("Que desea hacer?: ", scanner);
 			System.out.println("\n --------------------------");
 			return opcion;
@@ -23,22 +23,19 @@ public class MenuMostrarCliente {
 
 			switch (getOpcion(scanner)) {
 			case 1:
-				comic.control.Mostrar.mostrar(conexion);
+				comic.control.Mostrar.mostrarCliente(conexion);
 				break;
 			case 2:
-				comic.control.MostrarDetalles.mostrar(conexion);
+				comic.control.MostrarDetalles.mostrarCliente(conexion);
 				break;
 			case 3:
-				tipoEspecial.control.Mostrar.mostrar(conexion);
+				dibujante.control.Mostrar.mostrarCliente(conexion);
 				break;
 			case 4:
-				dibujante.control.Mostrar.mostrar(conexion);
+				guionista.control.Mostrar.mostrarCliente(conexion);
 				break;
 			case 5:
-				guionista.control.Mostrar.mostrar(conexion);
-				break;
-			case 6:
-				personaje.control.Mostrar.mostrar(conexion);
+				personaje.control.Mostrar.mostrarCliente(conexion);
 				break;
 			case 0:
 				System.out.println("Cerrando Sistema ...    ");

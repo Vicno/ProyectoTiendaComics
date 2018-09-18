@@ -9,7 +9,8 @@ public class Mostrar {
 
 	public static void mostrar(Conexion conexion) {
 		try {
-			System.out.println("Ventas: ");
+			System.out.println("Ventas: "
+			+ "\n  \tNúmero Venta\t || \tFecha\t ");
 			conexion.consulta("SELECT * FROM Venta");
 			resultSet = conexion.resultado();
 

@@ -9,7 +9,8 @@ public class Mostrar {
 
 	public static void mostrar(Conexion conexion) {
 		try {
-			System.out.println("Detalles de venta: ");
+			System.out.println("Detalles de venta: "
+			+ "\n  \tCódigo Detalle\t || \tCódigo Comic\t || \tCantidad\t || \tNúmero de Compra");
 			conexion.consulta("SELECT d.codigodetallecompra, d.codigoComic, c.Titulo, d.cantidad, d.numerocompra"
 					+ "  FROM detallecompra d INNER JOIN comic c ON d.codigoComic = c.codigoComic");
 			resultSet = conexion.resultado();
@@ -19,9 +20,9 @@ public class Mostrar {
 				System.out.print("\t");
 				System.out.print(resultSet.getString("CODIGOCOMIC"));
 				System.out.print("\t");
-				System.out.print(resultSet.getString("NUMEROcompra"));
+				System.out.print(resultSet.getString("CANTIDAD"));
 				System.out.print("\t");
-				System.out.println(resultSet.getString("CANTIDAD"));
+				System.out.println(resultSet.getString("NUMEROcompra"));
 				
 				
 				

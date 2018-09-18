@@ -9,7 +9,9 @@ public class Mostrar {
 
 	public static void mostrar(Conexion conexion) {
 		try {
-			System.out.println("Detalles de Compra: ");
+			System.out.println("Detalles de Compra: "
+					+ "\n  \tCódigo Detalle\t || \tCódigo Comic \t || \tTitulo Comic\t"
+			+ " \tCantidad\t || \tNúmero de Compra\t ");
 			conexion.consulta("SELECT d.codigodetallecompra, d.codigoComic, c.Titulo, d.cantidad, d.numeroCompra" + 
 					"  FROM detallecompra d INNER JOIN comic c ON d.codigoComic = c.codigoComic");
 			resultSet = conexion.resultado();

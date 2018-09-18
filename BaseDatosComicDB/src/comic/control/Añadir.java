@@ -35,8 +35,8 @@ public class Añadir {
 				break;
 
 			} catch (SQLException e) {
-				e.printStackTrace();
-				// System.out.println("Cómic no pudo ser ingresado, código Ya existe! ");
+				//e.printStackTrace();
+				System.out.println("Cómic no pudo ser ingresado, código Ya existe! ");
 			}
 
 		}
@@ -81,7 +81,7 @@ public class Añadir {
 					break;
 				} catch (SQLException e) {
 					System.out.println("Error, guionista no se encuentra en la base de datos! ");
-					e.printStackTrace();
+					//e.printStackTrace();
 				}
 
 			}
@@ -135,7 +135,7 @@ public class Añadir {
 					break;
 				} catch (SQLException e) {
 					System.out.println("Error, Personaje no se encuentra en la base de datos! ");
-					e.printStackTrace();
+					//e.printStackTrace();
 				}
 
 			}
