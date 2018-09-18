@@ -1,0 +1,5 @@
+El archivo que contiene el codigo ejecutable se encuentra dentro de BaseDatosComicDB,
+ todos los documentos se encuentran en Documentacion Proyecto,
+ los dato de sql y el diagrama de dbforge se encuentran en SQL_Database, todo lo demas son datos
+creados por git, datos, diagramas, borradores pasados o un codigo del proyecto de version pasada,
+ los cuales no se eliminaron por miedo a que este evite la ejecucion correcta del programa.
