@@ -12,7 +12,7 @@ public class Principal {
 		Conexion conexion;
 		try {
 			conexion = new Conexion("root","","tiendacomics");
-			view.Menu.menu(scanner,conexion);
+			view.MenuModo.menu(scanner, conexion);
 			scanner.close();
 			conexion.close();
 		} catch (ClassNotFoundException e) {
